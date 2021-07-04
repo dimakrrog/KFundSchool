@@ -1,0 +1,43 @@
+#header{
+    background:darkred;
+    box-align: center;
+    width:715px;
+    height:100px;
+}
+#menu{
+    background:oldlace;
+    width:190px;
+    height:300px;
+    position:sticky;
+    display: table-cell; 
+}
+#content{
+    background:oldlace;
+    width:525px;
+    position:relative;
+    display: table-cell; 
+}
+#footer{
+    background:black;
+    width:715px;
+    position: relative;
+}
+
+.footer-image{
+    margin-right: 0px;
+    padding-left: 100px;
+    display: table-cell; 
+}
+.footer-text{
+    color: white;
+    margin-right: 0px;
+    padding: 30px;
+    display: table-cell; 
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:active {
+    color: red;
+}
