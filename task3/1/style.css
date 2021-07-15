@@ -1,0 +1,88 @@
+/* Gradient */
+.grad {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+    width: 100%;
+    background: white;
+    
+}
+.grad1 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(60deg,#123456,#654321);
+    border-radius: 5px;
+    margin: 10px;
+}
+.grad2 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(120deg,#123456,#7890ab,#cdef12 80%,#345678,#90abcd);
+    margin: 10px;
+}
+.grad3 {
+    width:300px;
+    height: 300px;
+    background: repeating-linear-gradient(45deg,yellow 25px,black 25px,black 50px,yellow 75px,black 75px);
+    margin: 10px;
+}
+.grad4 {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle,#987654,#abcdef);
+    margin: 10px;
+}
+
+/* скрытие */
+.vendor {
+    display: inline;
+}
+
+.vendor1 {
+    display: none;
+}
+
+.vendor2 {
+    visibility: hidden;
+}
+
+.vendor3 {
+    opacity: 0;
+}
+
+.vendor4 {
+    color: transparent;
+}
+
+/* скругление узлов, список */
+.basic12 {
+    display: flex;
+    flex-direction: column;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background: turquoise;
+    border-radius: 20% 10px 30% 40px;
+}
+ul li {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url("feature-1.png");
+}
+
+.basic5 {
+    display: flex;
+    flex-direction: column;
+
+
+    color: violet;
+    border: 2px solid #f0ff0f;
+}
+
+.basic5 p {
+    border: inherit;
+}
+
+
+
