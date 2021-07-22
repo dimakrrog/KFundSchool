@@ -54,7 +54,7 @@ p {
 .nav {
     display: flex;
     font-size: 13px;
-    font-weight: bold 700;
+    font-weight: 700;
     text-transform: uppercase;
 }
 

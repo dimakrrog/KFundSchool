@@ -1,0 +1,548 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Quattrocento+Sans:wght@700&display=swap" rel="stylesheet">         <title>Modest</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- Sprite -->
+        <svg style="display: none;">
+            <symbol id="facebook" viewBox="0 0 24 24">
+                <g>
+                    <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+                </g>
+            </symbol>
+            <symbol id="twitter" viewBox="0 0 24 24">
+                <g>
+                    <path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/>
+                </g>
+            </symbol>
+            <symbol id="linkedin" viewBox="0 0 24 24">
+                <g>
+                    <path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/><path d="m.396 7.977h4.976v16.023h-4.976z"/><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"/>                
+                </g>
+            </symbol>
+            <symbol id="google" viewBox="0 0 604.35 604.35">
+                <g>
+                    <path d="M423.301,341.7l-28.051-20.4c-10.199-7.649-20.4-17.85-20.4-35.7s12.75-33.15,25.5-40.8
+                        c33.15-25.5,66.301-53.55,66.301-109.65c0-53.55-33.15-84.15-51-99.45H459L489.6,0H331.5C219.3,0,163.2,71.4,163.2,147.9
+                        c0,58.65,45.9,122.4,127.5,122.4h20.4c-2.55,7.65-10.2,20.4-10.2,33.15c0,25.5,10.2,35.7,22.95,51
+                        c-35.7,2.55-102,10.2-150.45,40.8c-45.9,28.05-58.65,66.3-58.65,94.35c0,58.65,53.55,114.75,168.3,114.75
+                        c137.7,0,204.001-76.5,204.001-150.449C487.051,400.35,459,372.3,423.301,341.7z M229.5,109.65c0-56.1,33.15-81.6,68.85-81.6
+                        c66.3,0,102,89.25,102,140.25c0,66.3-53.549,79.05-73.949,79.05C262.65,247.35,229.5,168.3,229.5,109.65z M321.301,568.65
+                        C237.15,568.65,183.6,530.4,183.6,474.3c0-56.1,51-73.95,66.3-81.6c33.15-10.2,76.5-12.75,84.151-12.75c7.648,0,12.75,0,17.85,0
+                        c61.199,43.35,86.699,61.2,86.699,102C438.6,530.4,390.15,568.65,321.301,568.65z"/>
+                </g>
+            </symbol>
+            <symbol id="dribbble" viewBox="0 0 186.846 186.846">
+                <g>
+                    <path d="M93.423,0.001C41.909,0.001,0,41.91,0,93.423s41.909,93.422,93.423,93.422s93.423-41.909,93.423-93.422
+                        S144.937,0.001,93.423,0.001z M154.303,44.061c10.488,12.91,16.945,29.205,17.482,46.968c-19.428-4.022-37.02-3.55-52.55-0.505
+                        c-2.812-6.576-5.723-12.841-8.661-18.762C127.487,64.476,142.211,55.17,154.303,44.061z M143.779,33.365
+                        c-12.003,10.956-25.913,19.068-40.156,25.057C93.169,39.305,83.167,24.909,77.074,16.728c5.276-1.124,10.743-1.727,16.349-1.727
+                        C112.58,15.001,130.145,21.915,143.779,33.365z M61.924,21.627c4.601,5.962,15.56,20.89,27.332,42.129
+                        C59.67,73.395,30.962,75.019,17.167,75.17C22.917,51.15,39.738,31.399,61.924,21.627z M15.082,90.208
+                        c0.148,0,0.291,0.001,0.442,0.001c9.532,0,26.996-0.641,47.556-4.39c11.73-2.139,22.853-5.018,33.29-8.586
+                        c2.717,5.415,5.418,11.127,8.037,17.114c-14.614,4.705-26.938,11.475-36.7,18.197c-16.37,11.273-27.838,23.78-34.1,31.513
+                        C22.013,130.384,15,112.712,15,93.423C15,92.345,15.038,91.276,15.082,90.208z M44.416,154.582
+                        c5.391-6.788,16.364-19.143,32.237-29.984c10.787-7.368,21.947-12.842,33.436-16.435c6.666,17.278,12.357,36.369,15.75,56.64
+                        c-9.888,4.508-20.858,7.042-32.416,7.042C74.891,171.845,57.852,165.37,44.416,154.582z M139.639,156.726
+                        c-3.497-18.617-8.712-36.122-14.741-52.12c14.83-2.502,30.157-1.986,45.899,1.55C167.402,126.846,155.889,144.83,139.639,156.726z"
+                    />
+                </g>
+            </symbol>
+            <symbol id="behance" viewBox="0 0 511.958 511.958">
+                <g>
+                    <path d="M210.624,240.619c10.624-5.344,18.656-11.296,24.16-17.728c9.792-11.584,14.624-26.944,14.624-45.984
+                        c0-18.528-4.832-34.368-14.496-47.648c-16.128-21.632-43.424-32.704-82.016-33.28H0v312.096h142.56
+                        c16.064,0,30.944-1.376,44.704-4.192c13.76-2.848,25.664-8.064,35.744-15.68c8.96-6.624,16.448-14.848,22.4-24.544
+                        c9.408-14.656,14.112-31.264,14.112-49.76c0-17.92-4.128-33.184-12.32-45.728C238.912,255.627,226.752,246.443,210.624,240.619z
+                        M63.072,150.187h68.864c15.136,0,27.616,1.632,37.408,4.864c11.328,4.704,16.992,14.272,16.992,28.864
+                        c0,13.088-4.32,22.24-12.864,27.392c-8.608,5.152-19.776,7.744-33.472,7.744H63.072V150.187z M171.968,348.427
+                        c-7.616,3.68-18.336,5.504-32.064,5.504H63.072v-83.232h77.888c13.568,0.096,24.128,1.888,31.68,5.248
+                        c13.44,6.08,20.128,17.216,20.128,33.504C192.768,328.651,185.856,341.579,171.968,348.427z"/>
+                    <rect x="327.168" y="110.539" width="135.584" height="38.848"/>
+                    <path d="M509.856,263.851c-2.816-18.08-9.024-33.984-18.688-47.712c-10.592-15.552-24.032-26.944-40.384-34.144
+                        c-16.288-7.232-34.624-10.848-55.04-10.816c-34.272,0-62.112,10.72-83.648,32c-21.472,21.344-32.224,52.032-32.224,92.032
+                        c0,42.656,11.872,73.472,35.744,92.384c23.776,18.944,51.232,28.384,82.4,28.384c37.728,0,67.072-11.232,88.032-33.632
+                        c13.408-14.144,20.992-28.064,22.656-41.728H446.24c-3.616,6.752-7.808,12.032-12.608,15.872
+                        c-8.704,7.04-20.032,10.56-33.92,10.56c-13.216,0-24.416-2.912-33.76-8.704c-15.424-9.28-23.488-25.536-24.512-48.672h170.464
+                        C512.16,289.739,511.52,274.411,509.856,263.851z M342.976,269.835c2.24-15.008,7.68-26.912,16.32-35.712
+                        c8.64-8.768,20.864-13.184,36.512-13.216c14.432,0,26.496,4.128,36.32,12.416c9.696,8.352,15.168,20.48,16.288,36.512H342.976z"
+                    />
+                </g>
+            </symbol>
+            <symbol id="skype" viewBox="0 0 24 24">
+                <g>
+                    <path d="m23.309 14.547c1.738-7.81-5.104-14.905-13.139-13.543-4.362-2.707-10.17.352-10.17 5.542 0 1.207.333 2.337.912 3.311-1.615 7.828 5.283 14.821 13.311 13.366.936.495 2.004.777 3.139.777 4.949 0 8.118-5.133 5.947-9.453zm-11.213 5.332c-2.342 0-4.63-.565-5.984-2.499-2.018-2.854.643-4.282 1.949-3.194 1.09.919.748 3.142 3.949 3.142 1.411 0 3.153-.602 3.153-2.001 0-2.815-6.245-1.483-8.728-4.552-.912-1.124-1.084-3.107.036-4.545 1.952-2.512 7.68-2.665 10.143-.768 2.274 1.76 1.66 4.096-.175 4.096-2.207 0-1.047-2.888-4.61-2.888-2.583 0-3.599 1.837-1.78 2.731 2.421 1.202 8.75.827 8.75 5.603-.008 3.357-3.247 4.875-6.703 4.875z"/>
+                </g>
+            </symbol>
+        </svg> <!-- Sprite -->
+        
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__logo">
+                        <img src="img/modest.png" alt="">
+                    </div>
+                    <nav class="nav">
+                        <a class="nav__link" href="#" >HOME</a>
+                        <a class="nav__link" href="#" >about</a>
+                        <a class="nav__link" href="#" >work</a>
+                        <a class="nav__link" href="#" >TEAM</a>
+                        <a class="nav__link" href="#" >services</a>
+                        <a class="nav__link" href="#" >FEATURES</a>
+                        <a class="nav__link" href="#" >contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header><!-- Header -->
+
+        <!-- Banner -->
+        <div class="banner">
+            <div class="container">
+                <div class="banner__inner">
+                    <div class="banner__title">welcome to our marketplace</div>
+                    <div class="banner__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus ...</div>
+                    <div class="btns">
+                        <a class="btn" href="#">view more</a>
+                        <a class="btn" href="#">video tour</a>
+                    </div>
+                </div>    
+            </div>
+        </div><!-- Banner -->
+
+        <!-- About -->
+        <div class="about">
+            <div class="container">
+                <div class="section__title">
+                    <div class="section__border__left"></div>
+                    <div class="section__text">we are modest.</div>
+                </div>    
+                <div class="about__inner">
+                    <div class="about__content">
+                        <div class="about__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique ndolor non, ornare sagittis dolor. Nulla vestibulu lacus sed molestie gravida. Crferm entum  quismagna congue, vel sodales arcu vestibulum. Nunc lobortis dui magna, quis lacusullamcorper at.</p>
+                            <p>Phasellus sollicitudin ante eros ornare, sit amet luctus lorem semper. Suspendisse posuere, quamdictum consectetur, augue metus pharetra tellus, eu feugiatloreg egetnisi. Cras ornare bibendum ante, ut bibendum odio convallis eget. vel sodales arcu vestibulum</p>
+                        </div>
+                        <div class="social">
+                            <a class="social__item" href="" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#google"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#dribbble"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a>
+                        </div><!-- social -->
+                    </div><!-- about__content -->
+                    <div class="about__goal">
+                        <div class="about__article">
+                            <div class="about__article__number">01</div>
+                            <div class="about__article__content">
+                                <div class="about__article__title">Dedication to the customers</div>
+                                <div class="about__article__text">
+                                    <p>
+                                        Integer vel lacus non dui ullamcorper venenatis. Aliquam vitae tristique nisi, vitae ullamcorper risus. Nam porttitor blandit ultricies.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- about__article -->
+                        <div class="about__article">
+                            <div class="about__article__number">02</div>
+                            <div class="about__article__content">
+                                <div class="about__article__title">working closely with our clients</div>
+                                <div class="about__article__text">
+                                    <p>
+                                        Sed blandit nisi urna, sed pellentesque enim consectetur vitae. Suspendisse ut vehicula nibh.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- about__article -->
+                        <div class="about__article">
+                            <div class="about__article__number">03</div>
+                            <div class="about__article__content">
+                                <div class="about__article__title">increase happiness</div>
+                                <div class="about__article__text">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend laoreet euismod.
+                                    </p>
+                                </div>
+                            </div>
+                        </div><!-- about__article -->
+                    </div><!-- about__goal -->
+                </div><!-- about__inner -->
+            </div><!-- Container -->
+            <div class="about__separator"></div>
+        </div><!-- About -->
+
+        <!-- Team -->
+        <div class="team">
+            <div class="container">
+                <div class="section__title">
+                    <div class="section__border__left"></div>
+                    <div class="section__text">meet the team.</div>
+                </div>    
+                <div class="team__inner">
+                    <div class="team__member">
+                        <img class="team__photo" src="img/Team/member-1.png">
+                        <div class="team__memeber__content">
+                            <div class="team__member__name">Gloria Bromley</div>
+                            <div class="team__member__prof">CEO and Founder</div>
+                        </div>
+                        <div class="team__member__hover">
+                            <div class="social social--hover">
+                                <a class="social__item" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item" href="" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>    
+                            </div>
+                        </div><!-- team__member__hover -->
+                    </div><!-- team__member -->
+                    <div class="team__member">
+                        <img class="team__photo" src="img/Team/member-2.png">
+                        <div class="team__memeber__content">
+                            <div class="team__member__name">Paul Torres</div>
+                            <div class="team__member__prof">Head of Development</div>
+                        </div>
+                        <div class="team__member__hover">
+                            <div class="social social--hover">
+                                <a class="social__item" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item" href="" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>    
+                            </div>
+                        </div><!-- team__member__hover -->
+                    </div><!-- team__member -->
+                    <div class="team__member">
+                        <img class="team__photo" src="img/Team/member-3.png">
+                        <div class="team__memeber__content">
+                            <div class="team__member__name">Judith Gillette</div>
+                            <div class="team__member__prof">Graphic Desinger</div>
+                        </div>
+                        <div class="team__member__hover">
+                            <div class="social social--hover">
+                                <a class="social__item" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item" href="" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>    
+                            </div>
+                        </div><!-- team__member__hover -->
+                    </div><!-- team__member -->
+                    <div class="team__member">
+                        <img class="team__photo" src="img/Team/member-4.png">
+                        <div class="team__memeber__content">
+                            <div class="team__member__name">Delores Reed</div>
+                            <div class="team__member__prof">Client Service Director</div>
+                        </div>
+                        <div class="team__member__hover">
+                            <div class="social social--hover">
+                                <a class="social__item" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#twitter"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item" href="" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a class="social__item" href="#" target="_blank">
+                                    <svg class="social__icon">
+                                        <use xlink:href="#linkedin"></use>
+                                    </svg>
+                                </a>    
+                            </div>
+                        </div><!-- team__member__hover -->
+                    </div><!-- team__member -->
+                </div><!-- team__inner -->
+            </div><!-- Container -->
+        </div><!-- Team -->
+
+        <!-- Works -->
+        <div class="works">
+            <div class="container">
+                <div class="section__title">
+                    <div class="section__border__left"></div>
+                    <div class="section__text">lovely work.</div>
+                </div>    
+                <div class="works__inner">
+                    <div class="works__item">
+                        <img src="img/Works/work-1.png" alt="">
+                        <div class="works__hover">
+                            <div class="works__hover__plus">
+                                <img src="img/Works/plus.png" alt="">
+                            </div>
+                            <div class="works__hover__title">partnership guidlines</div>
+                        </div><!-- works__hover -->
+                    </div><!-- works__item -->
+                    <div class="works__item">
+                        <img src="img/Works/work-2.png" alt="">
+                        <div class="works__hover">
+                            <div class="works__hover__plus">
+                                <img src="img/Works/plus.png" alt="">
+                            </div>
+                            <div class="works__hover__title">partnership guidlines</div>
+                        </div><!-- works__hover -->
+                    </div><!-- works__item -->
+                    <div class="works__item">
+                        <img src="img/Works/work-3.png" alt="">
+                        <div class="works__hover">
+                            <div class="works__hover__plus">
+                                <img src="img/Works/plus.png" alt="">
+                            </div>
+                            <div class="works__hover__title">partnership guidlines</div>
+                        </div><!-- works__hover -->
+                    </div><!-- works__item -->
+                    <div class="works__item">
+                        <img src="img/Works/work-4.png" alt="">
+                        <div class="works__hover">
+                            <div class="works__hover__plus">
+                                <img src="img/Works/plus.png" alt="">
+                            </div>
+                            <div class="works__hover__title">partnership guidlines</div>
+                        </div><!-- works__hover -->
+                    </div><!-- works__item -->
+                    <div class="works__item">
+                        <img src="img/Works/work-5.png" alt="">
+                        <div class="works__hover">
+                            <div class="works__hover__plus">
+                                <img src="img/Works/plus.png" alt="">
+                            </div>
+                            <div class="works__hover__title">partnership guidlines</div>
+                        </div><!-- works__hover -->
+                    </div><!-- works__item -->
+                    <div class="works__item">
+                        <img src="img/Works/work-6.png" alt="">
+                        <div class="works__hover">
+                            <div class="works__hover__plus">
+                                <img src="img/Works/plus.png" alt="">
+                            </div>
+                            <div class="works__hover__title">partnership guidlines</div>
+                        </div><!-- works__hover -->
+                    </div><!-- works__item -->
+                </div><!-- works__inner -->
+                <div class="works__button">
+                    <a class="btn" href="#">show me more</a>
+                </div>
+            </div><!-- Container -->
+        </div><!-- Works -->
+
+        <!-- Services -->
+        <div class="services">
+            <div class="container">
+                <div class="section__title">
+                    <div class="section__border__left"></div>
+                    <div class="section__text">what we do.</div>
+                </div>
+                <div class="services__inner">
+                    <div class="services__item">
+                        <img class="services__pic" src="img/Services/pic-1.png" alt="">
+                        <div class="services__title">Easy theme Setup</div>
+                        <div class="services__text">Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum.</div>
+                    </div><!-- services__item -->
+                    <div class="services__item">
+                        <img class="services__pic" src="img/Services/pic-2.png" alt="">
+                        <div class="services__title">pixel perfect design</div>
+                        <div class="services__text">Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum.</div>
+                    </div><!-- services__item -->
+                    <div class="services__item">
+                        <img class="services__pic services__pic--phone" src="img/Services/pic-3.png" alt="">
+                        <div class="services__title">responsive display</div>
+                        <div class="services__text">Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum.</div>
+                    </div><!-- services__item -->
+                    <div class="services__item">
+                        <img class="services__pic" src="img/Services/pic-4.png" alt="">
+                        <div class="services__title">24/7 support</div>
+                        <div class="services__text">Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum.</div>
+                    </div><!-- services__item -->
+
+                    <div class="services__item">
+                        <img class="services__pic" src="img/Services/pic-1.png" alt="">
+                        <div class="services__title">Easy theme Setup</div>
+                        <div class="services__text">Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum.</div>
+                    </div><!-- services__item -->
+                    <div class="services__item">
+                        <img class="services__pic" src="img/Services/pic-2.png" alt="">
+                        <div class="services__title">pixel perfect design</div>
+                        <div class="services__text">Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum.</div>
+                    </div><!-- services__item -->
+                    <div class="services__item">
+                        <img class="services__pic services__pic--phone" src="img/Services/pic-3.png" alt="">
+                        <div class="services__title">responsive display</div>
+                        <div class="services__text">Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum.</div>
+                    </div><!-- services__item -->
+                    <div class="services__item">
+                        <img class="services__pic" src="img/Services/pic-4.png" alt="">
+                        <div class="services__title">24/7 support</div>
+                        <div class="services__text">Nunc mattis lorem in leo lobortis, ut venenatis justo commodo. Maecenas a justo nec velit egestas fermentum.</div>
+                    </div><!-- services__item -->
+                </div><!-- services__inner -->
+            </div><!-- Container -->
+        </div><!-- Services -->
+
+        <!-- Features -->
+        <div class="features">
+            <div class="container">
+                <div class="section__title">
+                    <div class="section__border__left"></div>
+                    <div class="section__text">FEATURES.</div>
+                </div>
+                <div class="features__inner">
+                    <div class="features__item">
+                        <img class="features__img" src="img/Features/feature-1.png" alt="">
+                        <div class="features__title">Product Design: Eames Chairs</div>
+                        <div class="features__text">Eames designs are certainly iconic. Everyone of us know at least two or three of their famous chairs. I would even risk saying that most of us dream about having a nice Eames.</div>
+                    </div><!-- features__item -->
+                    <div class="features__item">
+                        <img class="features__img" src="img/Features/feature-2.png" alt="">
+                        <div class="features__title">Elegant and Colorful Logos</div>
+                        <div class="features__text">I’ve always found logo design to be one of the most challenging things to get right. There’s so much that a logo can say about a brand without actually saying it.</div>
+                    </div><!-- features__item -->
+                    <div class="features__item">
+                        <img class="features__img" src="img/Features/feature-3.png" alt="">
+                        <div class="features__title">A Showcase of Creative</div>
+                        <div class="features__text">It’s always interesting to see another designer’s take on a famous website, app or even physical product. Different designers add their own personality and style.</div>
+                    </div><!-- features__item -->
+                </div><!-- features__inner -->
+            </div><!-- container -->
+        </div><!-- Features -->
+
+        <!-- Contact -->
+        <div class="contact">
+            <div class="container">
+                <div class="section__title">
+                    <div class="section__border__left"></div>
+                    <div class="section__text">stay in touch.</div>
+                </div>
+            </div><!-- container -->
+            <div class="contact__pic">
+                <img src="img/Contact/pic-1.png" alt="">
+            </div>
+            <div class="container">
+                <div class="contact__inner">
+                    <div class="contact__content">
+                        <div class="contact__title">contact information</div>
+                        <div class="contact__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi metus, tristique nec dolor non, ornare sagittis dolor. Nulla vestibulum lacus sed molestie gravida.</p>
+                            <p>Cras fermentum elit quis magna congue, vel sodales arcu vestibulum. Nunc lobortis dui magna, quis dapibus lacus</p>
+                        </div>
+                    </div><!-- contact__content -->
+                    <div class="contact__form">
+                        <div class="contact__form__address">
+                            <div class="contact__form__item">
+                                <div class="contact__form__title">Your Name</div>
+                                <input class="contact__form__edit" type="text" size="40">
+                            </div><!-- contact__form__item -->
+                            <div class="contact__form__item">
+                                <div class="contact__form__title">Your email</div>
+                                <input class="contact__form__edit" type="text" size="40">
+                            </div><!-- contact__form__item -->
+                        </div><!-- contact__form__address -->
+                        <div class="contact__form__message">
+                            <div class="contact__form__title">Your message</div>
+                            <textarea class="contact__form__textarea" name="message" cols="40" rows="3"></textarea>
+                        </div><!-- contact__form__item -->
+                        <a class="btn btn--green">send message</a>
+                </div><!-- contact__form -->
+                </div><!-- contact__inner -->
+            </div><!-- container -->
+        </div><!-- Contact -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__copyright">
+                        © Copyright 2014 by PSD Booster. All Rights Reserved.
+                    </div>
+                    <div class="footer__social">
+                        <div class="social social--footer">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#skype"></use>
+                                </svg>
+                            </a>    
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#behance"></use>
+                                </svg>
+                            </a>    
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </a>    
+                        </div><!-- social social--footer -->
+
+                    </div><!-- footer__social -->
+                </div><!-- footer__inner -->
+            </div><!-- container -->
+        </div><!-- Footer -->
+    </body>
+</html>
