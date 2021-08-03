@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+}
+li {
+    width: 20%;
+}
+img {
+    width: 80px;
+}
+
+.hauntlet:hover + .people ul li:nth-child(odd) {
+    background-color: white;
+    background: #000;
+    visibility: hidden;;
+}

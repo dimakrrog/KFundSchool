@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_TyEVZp6X7WhBV8AZmqBUx');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_7h3cttv', 'template_0o8t6ve', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="container-left">
+
+            </div>
+            <div class="container-right">
+                <div class="container-right__inner">
+                    <form class="reg__form" name="contact-form" id="contact-form" action="">
+                        <input type="hidden" name="contact_number" id="">
+                        <h1>Registration info</h1>
+                        <div class="form__row"><input type="text" name="from_name" placeholder="Name"></div>
+                        <div class="form__row">
+                            <input type="date" name="birth" id="" placeholder="name">
+                            <span>
+                                <!-- <label for="gender">Gender</label> -->
+                                <select name="gender">
+                                    <option value="M">M</option>
+                                    <option value="W">W</option>
+                                </select>    
+                            </span>
+                        </div>
+                        <div class="form__row">
+                            <select name="ClassRoom"> 
+                                <option value="c1">Class 1</option>
+                                <option value="c2">Class 2</option>
+                            </select>    
+                        </div>
+                        <div class="form__row"><input type="text" name="code" placeholder="Registration code"></div>
+                        <div class="form__row"><input type="text" name="reply_to" placeholder="email"></div>
+                        <input type="submit" value="Send">
+                        
+                    </form>
+                </div> 
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

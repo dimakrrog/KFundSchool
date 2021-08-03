@@ -1,0 +1,41 @@
+table {
+    border: 2px solid black;
+    background: linear-gradient(to right, red, white);
+    color: #0C213B;
+    border-collapse: collapse;
+}
+th {
+    text-transform: uppercase;
+    color: yellow;
+}    
+td {
+    background: #888888;
+    border: none;
+    width: 150px;
+}
+td:hover {
+    background: #995522;
+}   
+tr {
+    /* border: 1px #999999 solid; */
+}
+
+.dark {
+    background: #991122;
+    opacity: 1;
+    color: white;
+}
+.light {
+    background: #dd4444;
+    color: white;
+}
+.ball100 {
+    background: #991122;
+    color: white;
+}
+.last {
+    width: 900px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, red, white);
+}
